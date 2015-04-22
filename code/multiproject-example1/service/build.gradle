@@ -1,0 +1,10 @@
+dependencies {
+    testCompile 'junit:junit:4.11'
+}
+
+// Make sure test output is enabled
+test {
+    testLogging {
+        events "started", "passed", "skipped", "failed", "standardOut", "standardError"
+    }
+}

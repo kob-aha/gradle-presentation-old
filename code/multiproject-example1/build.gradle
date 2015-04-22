@@ -1,0 +1,12 @@
+subprojects {
+    apply plugin: 'java'
+
+    repositories {
+        maven {
+            url "http://artifactory.nam.nsroot.net:8081/artifactory/libs-release"
+        }
+        maven {
+            url "http://artifactory.nam.nsroot.net:8081/artifactory/libs-snapshot"
+        }
+    }
+}

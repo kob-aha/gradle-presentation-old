@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 
+                             http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>org.gradleintro.multi</groupId>
+    <artifactId>parent</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+    <name>Multi module example - Parent</name>
+
+    <repositories>
+        <repository>
+            <id>libs-release</id>
+            <name>Citi Innovation Lab TLV Artifactory-releases</name>
+            <url>http://artifactory.nam.nsroot.net:8081/artifactory/libs-release</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </repository>
+        <repository>
+            <id>libs-snapshot</id>
+            <name>Citi Innovation Lab TLV Artifactory-snapshots</name>
+            <url>http://artifactory.nam.nsroot.net:8081/artifactory/libs-snapshot</url>
+            <releases>
+                <enabled>false</enabled>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+                <updatePolicy>always</updatePolicy>
+            </snapshots>
+        </repository>
+    </repositories>
+
+    <properties>        
+        <log4j.version>1.2.17</log4j.version>
+		<junit.version>4.11</junit.version>
+    </properties>    
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.gradleintro.multi</groupId>
+                <artifactId>service</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>log4j</groupId>
+                <artifactId>log4j</artifactId>
+                <version>${log4j.version}</version>
+            </dependency>
+			<dependency>
+                <groupId>junit</groupId>
+                <artifactId>junit</artifactId>
+                <version>${junit.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+	<modules>
+        <module>app</module>
+        <module>service</module>
+    </modules>    
+	
+</project>

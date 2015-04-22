@@ -1,0 +1,66 @@
+Gradle
+
+1. Build tools overview:
+
+	1.1 Ant
+	1.2 Maven
+		1.2.1 Convention over configuration
+		1.2.2 Declarative Vs. Imperative	
+	
+2. Why do we need another build tool? (Taken from Gentle introduction to Gradle https://www.youtube.com/watch?v=OFUEb7pLLXw):
+
+	2.1 Both Maven and Ant presented key inovation when they where introduced, however today there are more requirements from a build tool.
+	    In addition, not all entrprise projects are alike which require different build process.
+
+	2.2 Projects today contain a lot of modules and code.
+
+	2.3 Tommorrow build will also need custom automated deployment tommorrow.
+
+	Answer: It is needed to be able to give developers the ability to build a custom build tool that will fit their needs without needing to "invent" the wheel ourself.
+
+
+3. Gradle overview
+	short description 
+	Gradle likes you to be as much as declerative as possible, but not the inforce opinions on the build
+	Gradle want the build to be adaptable. It provides basic conventions, however you can add your own conventions in a flexible way
+	Where does Gradle fit between Ant and Maven
+	who uses it (is it really needed?)
+	hello world example (take a look on Gradleware webinars)	
+	Discuss the fact that Plugins are a way for Gradle to be declerative and not imperative
+	Pros/Cons
+	
+3. Gradle in a nutshell
+
+4. Main differences between Gradle and Maven
+
+5. Demo
+ 	show the javadoc as a reference to the things I presented in the hello world example
+	Present task input functionality
+	Show project dependencies (changing a project also compiles his deoendant project)
+
+6. summary + comparison between the build tools
+
+
+
+Links:
+
+http://www.drdobbs.com/jvm/why-build-your-java-projects-with-gradle/240168608
+http://java.dzone.com/polls/switch-gradle-good-move
+http://stackoverflow.com/questions/1163173/why-use-gradle-instead-of-ant-or-maven
+http://technologyconversations.com/2014/06/18/build-tools/
+http://zeroturnaround.com/rebellabs/java-build-tools-part-2-a-decision-makers-comparison-of-maven-gradle-and-ant-ivy/
+https://developer.jboss.org/wiki/GradleWhy
+
+Some points:
+============
+
+http://stackoverflow.com/questions/1163173/why-use-gradle-instead-of-ant-or-maven:
+This may be a bit controversial, but Gradle doesn't hide the fact that it's a fully-fledged programming language.
+Ant + ant-contrib is essentially a turing complete programming language that no one really wants to program in.
+Maven tries to take the opposite approach of trying to be completely declarative and forcing you to write and compile a plugin if you need logic. It also imposes a project model that is completely inflexible. Gradle combines the best of all these tools:
+It follows convention-over-configuration (ala Maven) but only to the extent you want itIt lets you write flexible custom tasks like in AntIt provides multi-module project support that is superior to both Ant and MavenIt has a DSL that makes the 80% things easy and the 20% things possible (unlike other build tools that make the 80% easy, 10% possible and 10% effectively impossible).
+Not sure how to quantify this, but it is really just so refreshing to think "how am I going to solve this?" as opposed to "what are the viable options my build tool is going to leave me to achieve this?"
+	
+	
+	
+	

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="org.gradleintro.test.service.MessageServiceTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2015-04-21T14:28:30" hostname="TLVCMEW000877" time="0.011">
+  <properties/>
+  <testcase name="getMessage" classname="org.gradleintro.test.service.MessageServiceTest" time="0.011"/>
+  <system-out><![CDATA[   ================ Running test method from class org.gradleintro.test.service.MessageServiceTest ================ 
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
